@@ -25,19 +25,22 @@
         <header id="geolocation">
             <span aria-hidden="true" class="icon-target"></span>
             <p>台北市第 3 選區</p>
-            <a href="#" class="manual"><span aria-hidden="true" class="icon-loop"></span><span class="screen-reader-text">手動定位</span></a>
+            <a href="#" class="action national"><span aria-hidden="true" class="icon-taiwan-map"></span><span class="screen-reader-text">全國不分區</span></a>
+            <a href="#" class="action manual"><span aria-hidden="true" class="icon-loop"></span><span class="screen-reader-text">手動定位</span></a>
         </header>
 
         <section itemscope itemtype="http://data-vocabulary.org/Person">
 
             <header id="legislator" class="kmt">
-                <img itemprop="photo" src="img/羅淑蕾.jpg" class="photo" />
+                <div class="photo" style="background-image:url(img/羅淑蕾.jpg)">
+                    <img itemprop="photo" src="img/羅淑蕾.jpg" alt="羅淑蕾" />
+                </div>
                 <div class="legislator">
                     <h1 itemprop="name">羅淑蕾</h1>
                     <aside class="party icons-party-kmt">國民黨</aside>
                 </div>
                 <div class="standpoint nuke">
-                    <p>擁核</p>
+                    <p onclick="bomb();">擁核</p>
                 </div>
             </header>
 
@@ -52,15 +55,49 @@
             <footer id="contact">
                 <h2>國會研究室</h2>
                 <ul>
-                    <li><span class="contact">電話</span><span class="data"><a itemprop="tel" href="tel:02-2358-6156">02-2358-6156<span aria-hidden="true" class="icon-phone"></span></a></span></li>
-                    <li><span class="contact">傳真</span><span class="data" itemprop="fax"><span class="no-link">02-2358-6160</span></span></li>
-                    <li><span class="contact">地址</span><span class="data"><a itemprop="address" href="https://maps.google.com.tw/?q=10051臺北市中正區濟南路1段3-1號0406室"><span class="address">10051臺北市中正區濟南路1段3-1號0406室</span><span aria-hidden="true" class="icon-map"></span></a></span></li>
+                    <li><span class="contact">電話</span>
+                        <span class="data">
+                            <a class="data-text" itemprop="tel" href="tel:02-2358-6156">02-2358-6156
+                                <span aria-hidden="true" class="icon-phone"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li><span class="contact">傳真</span>
+                        <span class="data" itemprop="fax">
+                            <span class="data-text no-link">02-2358-6160</span>
+                        </span>
+                    </li>
+                    <li><span class="contact">地址</span>
+                        <span class="data">
+                            <a class="data-text" itemprop="address" href="https://maps.google.com.tw/?q=10051臺北市中正區濟南路1段3-1號0406室">
+                                <span class="address">10051臺北市中正區濟南路1段3-1號0406室</span>
+                                <span aria-hidden="true" class="icon-map"></span>
+                            </a>
+                        </span>
+                    </li>
                 </ul>
                 <h2>松山服務處</h2>
                 <ul>
-                    <li><span class="contact">電話</span><span class="data"><a itemprop="tel" href="tel:02-2358-6156">02-2358-6156<span aria-hidden="true" class="icon-phone"></span></a></span></li>
-                    <li><span class="contact">傳真</span><span class="data" itemprop="fax"><span class="no-link">02-2358-6160</span></span></li>
-                    <li><span class="contact">地址</span><span class="data"><a itemprop="address" href="https://maps.google.com.tw/?q=10051臺北市中正區濟南路1段3-1號0406室"><span class="address">10051臺北市中正區濟南路1段3-1號0406室</span><span aria-hidden="true" class="icon-map"></span></a></span></li>
+                    <li><span class="contact">電話</span>
+                        <span class="data">
+                            <a class="data-text" itemprop="tel" href="tel:02-2358-6156">02-2358-6156
+                                <span aria-hidden="true" class="icon-phone"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li><span class="contact">傳真</span>
+                        <span class="data" itemprop="fax">
+                            <span class="data-text no-link">02-2358-6160</span>
+                        </span>
+                    </li>
+                    <li><span class="contact">地址</span>
+                        <span class="data">
+                            <a class="data-text" itemprop="address" href="https://maps.google.com.tw/?q=10051臺北市中正區濟南路1段3-1號0406室">
+                                <span class="address">10051臺北市中正區濟南路1段3-1號0406室</span>
+                                <span aria-hidden="true" class="icon-map"></span>
+                            </a>
+                        </span>
+                    </li>
                 </ul>
             </footer>
 
@@ -68,8 +105,11 @@
 
         <footer id="credit">
             <address>
+                <a href="http://gcaa.org.tw">
+                    <img src="img/credit-gcaa.png" alt="gcaa.org.tw 綠色公民行動聯盟" class="credit" />
+                </a>
                 <a href="http://g0v.tw">
-                    <img src="img/g0v-full-white.png" alt="g0v.tw 零時政府黑客松" class="credit" />
+                    <img src="img/credit-g0v.png" alt="g0v.tw 零時政府黑客松" class="credit" />
                 </a>
             </address>
         </footer>
@@ -91,6 +131,15 @@
         <script>document.write('<script src="http://'
             + (location.host || 'localhost').split(':')[0]
             + ':35729/livereload.js"></'
-            + 'script>')</script>
+            + 'script>')
+        </script>
     </body>
 </html>
+
+<!-- Font Bomb XDDD -->
+<script>
+function bomb () { if (window.FONTBOMB_HIDE_CONFIRMATION) { return } 
+window.FONTBOMB_HIDE_CONFIRMATION = true;
+(function () {try{var s = document.createElement('script');s.setAttribute('src', 'http://fontbomb.ilex.ca/js/main.js');document.body.appendChild(s);}catch(err){alert("Your browser is not compatible, watch the video or try with Chrome.")}}());
+}
+</script>
