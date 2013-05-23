@@ -23,6 +23,7 @@
 * 使用剛學會的 sass + compass 撰寫 css
 * 使用 [fire.app](http://fireapp.handlino.com/) 整合開發環境，在多種裝置上即時預覽
 * 使用 [icomoon](http://icomoon.io/app/) 製作 icon fonts
+* 使用 [fontbomb](http://fontbomb.ilex.ca/) 製作隱藏爆炸特效
 * 準備開始學 [zepto.js](http://zeptojs.com/) 製作互動效果
 * 使用 git 做版本控管
 * 使用 github pages 呈現目前結果
@@ -40,5 +41,5 @@
 
 ### 技術指導
 
-持續騷擾 [leo](https://twitter.com/sillyleo), [hlb](https://twitter.com/hlb) 以及 [tkalu](https://twitter.com/tkalu) 中，持續感謝 [Poga](https://twitter.com/devpoga), [vonstark](https://twitter.com/vonstark32), [clkao](https://twitter.com/clkao) 應援中 XD
+持續騷擾 [leo](https://twitter.com/sillyleo), [hlb](https://twitter.com/hlb) 以及 [tkalu](https://twitter.com/tkalu) 中，持續感謝 [Poga](https://twitter.com/devpoga), [vonstark](https://twitter.com/vonstark32), [clkao](https://twitter.com/clkao), [au](https://twitter.com/audreyt) 應援中 XD
 
