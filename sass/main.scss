@@ -275,7 +275,8 @@ textarea {
   &.nuke {
     color: red;
     @include background-image(linear-gradient(#000, #660000));
-  }
+    cursor: pointer;
+ }
 
   &.no-nuke {
     color: white;
