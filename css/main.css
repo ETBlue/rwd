@@ -50,13 +50,13 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+@media only screen and (min-width: 769px) and (max-width: 1200px) and (min-height: 769px) {
   /* line 36, ../sass/main.scss */
   html {
     font-size: 21px;
   }
 }
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1201px) and (min-height: 769px) {
   /* line 42, ../sass/main.scss */
   html {
     font-size: 24px;
@@ -239,76 +239,87 @@ textarea {
   background-color: #fff;
   border-bottom: 3px solid #33B4E4;
   position: relative;
-  -webkit-box-shadow: black 0 0 12px;
-  -moz-box-shadow: black 0 0 12px;
-  box-shadow: black 0 0 12px;
 }
-/* line 188, ../sass/main.scss */
+/* line 187, ../sass/main.scss */
 #geolocation p {
   display: block;
-  margin: 0 2rem 0 1.5rem;
+  margin: 0 5rem 0 1.5rem;
   padding-right: 0.5rem;
   border-right: 1px #ccc solid;
 }
-/* line 195, ../sass/main.scss */
-#geolocation .manual {
+/* line 194, ../sass/main.scss */
+#geolocation .action {
   padding: 1rem;
   width: 1rem;
   position: absolute;
-  right: 0;
   top: 0;
   background-image: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
+/* line 202, ../sass/main.scss */
+#geolocation .manual {
+  right: 0;
+}
 /* line 205, ../sass/main.scss */
+#geolocation .national {
+  right: 3rem;
+}
+/* line 209, ../sass/main.scss */
 #geolocation .screen-reader-text {
   color: transparent;
   white-space: nowrap;
 }
 
 /* second section: legislator */
-/* line 213, ../sass/main.scss */
+/* line 217, ../sass/main.scss */
 #legislator {
   font-weight: bold;
   position: relative;
 }
-/* line 217, ../sass/main.scss */
+/* line 221, ../sass/main.scss */
 #legislator.kmt {
   color: #fff;
   background-color: #0D2393;
 }
-/* line 222, ../sass/main.scss */
+/* line 226, ../sass/main.scss */
 #legislator.dpp {
   color: #fff;
   background-color: #009B00;
 }
-/* line 227, ../sass/main.scss */
+/* line 231, ../sass/main.scss */
 #legislator.gp {
   color: #333;
   background-color: #FFE401;
 }
 
-/* line 233, ../sass/main.scss */
+/* line 237, ../sass/main.scss */
 .photo {
   width: 5.4rem;
-  height: auto;
+  height: 5.4rem;
   float: left;
   margin-right: 1rem;
   border: 1px solid #fff;
+  background-size: cover;
+  background-position: center;
+}
+/* line 246, ../sass/main.scss */
+.photo img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
 }
 
-/* line 241, ../sass/main.scss */
+/* line 251, ../sass/main.scss */
 .legislator {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 244, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 .legislator h1 {
   font-size: 1.2rem;
 }
-/* line 248, ../sass/main.scss */
+/* line 258, ../sass/main.scss */
 .legislator .party {
   position: absolute;
   right: 1rem;
@@ -319,7 +330,7 @@ textarea {
   white-space: nowrap;
 }
 
-/* line 259, ../sass/main.scss */
+/* line 269, ../sass/main.scss */
 .standpoint {
   margin: 1rem 0 0 6.4rem;
   padding: .6rem 0;
@@ -328,7 +339,7 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 265, ../sass/main.scss */
+/* line 275, ../sass/main.scss */
 .standpoint.nuke {
   color: red;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #660000));
@@ -337,7 +348,7 @@ textarea {
   background-image: -o-linear-gradient(#000000, #660000);
   background-image: linear-gradient(#000000, #660000);
 }
-/* line 270, ../sass/main.scss */
+/* line 280, ../sass/main.scss */
 .standpoint.no-nuke {
   color: white;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ddff99), color-stop(100%, #006600));
@@ -346,23 +357,22 @@ textarea {
   background-image: -o-linear-gradient(#ddff99, #006600);
   background-image: linear-gradient(#ddff99, #006600);
 }
-/* line 275, ../sass/main.scss */
+/* line 285, ../sass/main.scss */
 .standpoint p {
   font-size: 2rem;
-  width: 100%;
   letter-spacing: 1rem;
   text-align: center;
-  text-indent: 1rem;
+  padding-left: 1rem;
 }
 
-/* third section: quote */
-/* line 286, ../sass/main.scss */
+/* third section: qu`ote */
+/* line 295, ../sass/main.scss */
 #quote {
   position: relative;
   overflow: visible;
   background-color: #FFF;
 }
-/* line 291, ../sass/main.scss */
+/* line 300, ../sass/main.scss */
 #quote::before {
   content: "";
   position: absolute;
@@ -374,7 +384,7 @@ textarea {
   border-bottom: 0.5rem solid #FFF;
   border-left: 0.5rem solid transparent;
 }
-/* line 303, ../sass/main.scss */
+/* line 312, ../sass/main.scss */
 #quote .stamp {
   font-weight: bold;
   font-size: 1.2rem;
@@ -393,23 +403,23 @@ textarea {
   -o-transform: rotate(5deg);
   transform: rotate(5deg);
 }
-/* line 314, ../sass/main.scss */
+/* line 323, ../sass/main.scss */
 #quote .unfavorable {
   color: #B20000;
   border: 3px #B20000 solid;
 }
-/* line 319, ../sass/main.scss */
+/* line 328, ../sass/main.scss */
 #quote .friendly {
   color: #00B200;
   border: 3px #00B200 solid;
 }
-/* line 324, ../sass/main.scss */
+/* line 333, ../sass/main.scss */
 #quote p:not(:last-of-type) {
   margin-bottom: 1rem;
 }
 
 /* fourth section: contact info */
-/* line 331, ../sass/main.scss */
+/* line 340, ../sass/main.scss */
 #contact {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e9e9), color-stop(100%, #f9f9f9));
   background-image: -webkit-linear-gradient(#e9e9e9, #f9f9f9);
@@ -417,75 +427,91 @@ textarea {
   background-image: -o-linear-gradient(#e9e9e9, #f9f9f9);
   background-image: linear-gradient(#e9e9e9, #f9f9f9);
 }
-/* line 333, ../sass/main.scss */
+/* line 343, ../sass/main.scss */
 #contact h2 {
   padding: 0.5rem 0 .5rem 0;
-  border-bottom: 1px #999 solid;
+  -webkit-box-shadow: #cccccc 0 1px 0, white 0 2px 0;
+  -moz-box-shadow: #cccccc 0 1px 0, white 0 2px 0;
+  box-shadow: #cccccc 0 1px 0, white 0 2px 0;
 }
-/* line 336, ../sass/main.scss */
+/* line 347, ../sass/main.scss */
 #contact h2:not(:first-child) {
   padding-top: 1rem;
 }
 
-/* line 342, ../sass/main.scss */
+/* line 353, ../sass/main.scss */
 ul {
   margin: 0.5rem 0;
   padding: 0;
 }
 
-/* line 347, ../sass/main.scss */
+/* line 358, ../sass/main.scss */
 li {
   overflow: hidden;
   *zoom: 1;
   list-style: none;
 }
-/* line 351, ../sass/main.scss */
+/* line 362, ../sass/main.scss */
 li .contact {
   padding: 0.5rem 0;
   display: block;
   width: 2.5rem;
   float: left;
 }
-/* line 358, ../sass/main.scss */
+/* line 369, ../sass/main.scss */
 li .data {
   display: block;
   margin-left: 2.5rem;
 }
-/* line 364, ../sass/main.scss */
-li a,
-li .no-link {
+/* line 374, ../sass/main.scss */
+li .data-text {
   display: inline-block;
-  padding: 0.4rem;
   margin: 0.1rem;
-  position: relative;
 }
-/* line 371, ../sass/main.scss */
+/* line 379, ../sass/main.scss */
+li .no-link {
+  padding: 0.4rem;
+}
+/* line 383, ../sass/main.scss */
+li a {
+  position: relative;
+  padding: 0 0.4rem;
+  line-height: 1.8rem;
+}
+/* line 389, ../sass/main.scss */
 li .address {
   display: block;
   margin-right: 1.5rem;
 }
 
 /* last section: g0v.tw support*/
-/* line 379, ../sass/main.scss */
+/* line 397, ../sass/main.scss */
 #credit {
   background-color: #000;
-  padding: 0 1rem;
+  padding: 0;
 }
-/* line 383, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 #credit a {
   padding: 0.5rem;
   float: right;
   background: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
-/* line 389, ../sass/main.scss */
+/* line 408, ../sass/main.scss */
+#credit a:hover, #credit a:active, #credit a:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 413, ../sass/main.scss */
 #credit .credit {
-  max-width: 2rem;
-  max-height: 2rem;
+  width: auto;
+  height: 1rem;
 }
 
 /* responsive layout */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  /* line 402, ../sass/main.scss */
+  /* line 426, ../sass/main.scss */
   #geolocation,
   #legislator,
   #quote,
@@ -496,28 +522,33 @@ li .address {
     width: 100%;
   }
 
-  /* line 409, ../sass/main.scss */
+  /* line 433, ../sass/main.scss */
   #geolocation .manual {
     right: 10%;
     margin-right: -1rem;
   }
+  /* line 437, ../sass/main.scss */
+  #geolocation .national {
+    right: 10%;
+    margin-right: 2rem;
+  }
 
-  /* line 416, ../sass/main.scss */
+  /* line 444, ../sass/main.scss */
   .legislator .party {
     right: 10%;
   }
 
-  /* line 422, ../sass/main.scss */
+  /* line 450, ../sass/main.scss */
   #quote::before {
     left: 10%;
   }
-  /* line 425, ../sass/main.scss */
+  /* line 453, ../sass/main.scss */
   #quote .stamp {
     right: 10%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
-  /* line 436, ../sass/main.scss */
+  /* line 464, ../sass/main.scss */
   #geolocation,
   #legislator,
   #quote,
@@ -528,28 +559,33 @@ li .address {
     width: 80%;
   }
 
-  /* line 443, ../sass/main.scss */
+  /* line 471, ../sass/main.scss */
   #geolocation .manual {
     right: 12.5%;
     margin-right: -1rem;
   }
+  /* line 475, ../sass/main.scss */
+  #geolocation .national {
+    right: 12.5%;
+    margin-right: 2rem;
+  }
 
-  /* line 450, ../sass/main.scss */
+  /* line 482, ../sass/main.scss */
   .legislator .party {
     right: 12.5%;
   }
 
-  /* line 456, ../sass/main.scss */
+  /* line 488, ../sass/main.scss */
   #quote::before {
     left: 12.5%;
   }
-  /* line 459, ../sass/main.scss */
+  /* line 491, ../sass/main.scss */
   #quote .stamp {
     right: 12.5%;
   }
 }
 @media only screen and (min-width: 1201px) {
-  /* line 470, ../sass/main.scss */
+  /* line 502, ../sass/main.scss */
   #geolocation,
   #legislator,
   #quote,
@@ -560,22 +596,27 @@ li .address {
     width: 960px;
   }
 
-  /* line 477, ../sass/main.scss */
+  /* line 509, ../sass/main.scss */
   #geolocation .manual {
     right: 120px;
     margin-right: -1rem;
   }
+  /* line 513, ../sass/main.scss */
+  #geolocation .national {
+    right: 120px;
+    margin-right: 2rem;
+  }
 
-  /* line 484, ../sass/main.scss */
+  /* line 520, ../sass/main.scss */
   .legislator .party {
     right: 120px;
   }
 
-  /* line 490, ../sass/main.scss */
+  /* line 526, ../sass/main.scss */
   #quote::before {
     left: 120px;
   }
-  /* line 493, ../sass/main.scss */
+  /* line 529, ../sass/main.scss */
   #quote .stamp {
     right: 120px;
   }
@@ -589,8 +630,8 @@ li .address {
   font-style: normal;
 }
 
-/* line 512, ../sass/main.scss */
-.icon-loop, .icon-loop-2, .icon-spinner, .icon-map, .icon-location, .icon-phone, .icon-search, .icon-target, .icon-checkmark, .icon-pencil {
+/* line 548, ../sass/main.scss */
+.icon-loop, .icon-loop-2, .icon-spinner, .icon-map, .icon-location, .icon-phone, .icon-search, .icon-target, .icon-checkmark, .icon-pencil, .icon-taiwan-map, .icon-spinner-2, .icon-spinner-3, .icon-disk, .icon-spam, .icon-notification {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -602,22 +643,22 @@ li .address {
   font-size: 0.9rem;
 }
 
-/* line 524, ../sass/main.scss */
-.icon-loop:after {
+/* line 560, ../sass/main.scss */
+.icon-loop:before {
   content: "\e000";
 }
 
-/* line 527, ../sass/main.scss */
+/* line 563, ../sass/main.scss */
 .icon-loop-2:before {
   content: "\e001";
 }
 
-/* line 530, ../sass/main.scss */
+/* line 566, ../sass/main.scss */
 .icon-spinner:before {
   content: "\e002";
 }
 
-/* line 533, ../sass/main.scss */
+/* line 569, ../sass/main.scss */
 .icon-map:before {
   content: "\e003";
   position: absolute;
@@ -625,23 +666,23 @@ li .address {
   top: 0.5rem;
 }
 
-/* line 539, ../sass/main.scss */
+/* line 575, ../sass/main.scss */
 .icon-location:before {
   content: "\e004";
 }
 
-/* line 542, ../sass/main.scss */
+/* line 578, ../sass/main.scss */
 .icon-phone:before {
   content: "\e005";
   margin-left: 0.5rem;
 }
 
-/* line 546, ../sass/main.scss */
+/* line 582, ../sass/main.scss */
 .icon-search:before {
   content: "\e006";
 }
 
-/* line 549, ../sass/main.scss */
+/* line 585, ../sass/main.scss */
 .icon-target:before {
   content: "\e007";
   color: #999;
@@ -649,12 +690,42 @@ li .address {
   width: 1rem;
 }
 
-/* line 555, ../sass/main.scss */
+/* line 591, ../sass/main.scss */
 .icon-checkmark:before {
   content: "\e008";
 }
 
-/* line 558, ../sass/main.scss */
+/* line 594, ../sass/main.scss */
 .icon-pencil:before {
   content: "\e009";
+}
+
+/* line 597, ../sass/main.scss */
+.icon-taiwan-map:before {
+  content: "\e00a";
+}
+
+/* line 600, ../sass/main.scss */
+.icon-spinner-2:before {
+  content: "\e00b";
+}
+
+/* line 603, ../sass/main.scss */
+.icon-spinner-3:before {
+  content: "\e00c";
+}
+
+/* line 606, ../sass/main.scss */
+.icon-disk:before {
+  content: "\e00d";
+}
+
+/* line 609, ../sass/main.scss */
+.icon-spam:before {
+  content: "\e00e";
+}
+
+/* line 612, ../sass/main.scss */
+.icon-notification:before {
+  content: "\e00f";
 }
