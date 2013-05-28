@@ -22,14 +22,36 @@
 
         <!-- Add your site or application content here -->
 
+        <div id="page-wrapper">
+
         <header id="geolocation">
-            <span aria-hidden="true" class="icon-target"></span>
-            <p>台北市第 3 選區</p>
-            <a href="#" class="action national"><span aria-hidden="true" class="icon-taiwan-map"></span><span class="screen-reader-text">全國不分區</span></a>
-            <a href="#" class="action manual"><span aria-hidden="true" class="icon-loop"></span><span class="screen-reader-text">手動定位</span></a>
+
+            <div style="display:none;" id="local">
+                <span aria-hidden="true" class="icon-target"></span>
+                <p>台北市第 3 選區</p>
+            </div>
+
+            <div id="unknown">
+                <span aria-hidden="true" class="icon-notification"></span>
+                <p>未指定立委</p>
+            </div>
+
+            <div style="display:none;" id="national">
+                <span aria-hidden="true" class="icon-taiwan-map"></span>
+                <p>國民黨不分區</p>
+            </div>
+
+            <a href="#" style="display:none;" class="action manual" id="action-manual">
+                <span aria-hidden="true" class="icon-loop"></span><span class="screen-reader-text">手動選擇立委</span>
+            </a>
+
+            <a class="action manual locked" id="action-done">
+                <span aria-hidden="true" class="icon-checkmark"></span><span class="screen-reader-text">確定</span>
+            </a>
+
         </header>
 
-        <section itemscope itemtype="http://data-vocabulary.org/Person">
+        <section style="display:none;" id="main-page" itemscope itemtype="http://data-vocabulary.org/Person">
 
             <header id="legislator" class="kmt">
                 <div class="photo" style="background-image:url(img/羅淑蕾.jpg)">
@@ -45,11 +67,18 @@
             </header>
 
             <article id="quote">
-                <aside class="stamp unfavorable">不怕民意型</aside>
+
+                <aside class="stamp unfavorable">
+                    <span class="types"></span><!-- for ttcat -->
+                    不怕民意型
+                </aside>
+
+                <div class="responds"></div><!-- for ttcat -->
                 <p>對反核民意的回應？</p>
                 <p>「沒有必要回應。」</p>
                 <p>若很多民眾打進辦公室？</p>
                 <p>「不會拉！」</p>
+
             </article>
 
             <footer id="contact">
@@ -103,6 +132,96 @@
 
         </section>
 
+        <section id="manual-page">
+
+            <div id="setup-location">
+                <p>選區立委</p>
+
+                <div class="ready">
+
+                    <span class="result">尚未選擇</span>
+                    <span style="display:none;" class="result">100台北市中正區徐州路</span>
+                    <span style="display:none;" class="result">定位中... 
+                        <span aria-hidden="true" class="icon-spinner-2"></span>
+                    </span>
+
+                    <a href="#" class="action edit">
+                        <span aria-hidden="true" class="icon-pencil"></span>
+                    </a>
+                    <a class="action upload locked">
+                        <span aria-hidden="true" class="icon-upload"></span>
+                    </a>
+                    <a href="#" class="action update">
+                        <span aria-hidden="true" class="icon-spinner"></span>
+                    </a>
+
+                </div>
+
+                <div style="display:none;" class="editing">
+                    <form name="select-local">
+
+                        <select name="select-city">
+                            <option value="Taipei">台北市</option>
+                            <option value="Taichung">台中市</option>
+                            <option value="Tainan">台南市</option>
+                            <option value="Kaoshung">高雄市</option>
+                        </select>
+
+                        <select name="select-district">
+                            <option value="west">中正區</option>
+                        </select>
+
+                        <label><input type="text" name="input-address" size="20"></input></label>
+
+                        <a href="#" class="action save">
+                            <span aria-hidden="true" class="icon-disk"></span>
+                        </a>
+
+                    </form>
+                </div>
+
+            </div>
+
+            <div id="setup-person">
+                <p>不分區立委</p>
+
+                <div class="ready">
+
+                    <span class="result">尚未選擇</span>
+
+                    <a href="#" class="action edit">
+                        <span aria-hidden="true" class="icon-pencil"></span>
+                    </a>
+                    <a class="action upload locked">
+                        <span aria-hidden="true" class="icon-upload"></span>
+                    </a>
+
+                </div>
+
+                <div style="display:none;" class="editing">
+                    <form name="select-national">
+
+                        <select id="select-party">
+                            <option value="TSU">台灣團結聯盟</option>
+                            <option value="DPP">民主進步黨</option>
+                            <option value="PFP">親民黨</option>
+                            <option value="KMT">國民黨</option>
+                        </select>
+
+                        <select id="select-legislator">
+                            <option value="green party">羅淑蕾</option>
+                        </select>
+
+                        <a href="#" class="action save">
+                            <span aria-hidden="true" class="icon-disk"></span>
+                        </a>
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
         <footer id="credit">
             <address>
                 <a href="http://gcaa.org.tw">
@@ -114,27 +233,32 @@
             </address>
         </footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-
-        <!-- LiveReload -->
-        <script>document.write('<script src="http://'
-            + (location.host || 'localhost').split(':')[0]
-            + ':35729/livereload.js"></'
-            + 'script>')
-        </script>
-    </body>
+    </div>
+</body>
 </html>
+
+<!-- h5bp default js link
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+-->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+-->
+
+<!-- LiveReload -->
+<script>document.write('<script src="http://'
+    + (location.host || 'localhost').split(':')[0]
+    + ':35729/livereload.js"></'
+    + 'script>')
+</script>
 
 <!-- Font Bomb XDDD -->
 <script>
