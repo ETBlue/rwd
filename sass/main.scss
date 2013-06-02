@@ -264,9 +264,19 @@ a.action {
   font-weight: bold;
   position: relative;
 
-  &.kmt {
+  &.gp {
     color: #fff;
-    background-color: #0D2393;
+    background-color: #FFE401;
+  }
+
+  &.tsu {
+    color: #fff;
+    background-color: #b4996c;
+  }
+
+  &.pfp {
+    color: #fff;
+    background-color: #ff6211;
   }
 
   &.dpp {
@@ -274,10 +284,11 @@ a.action {
     background-color: #009B00;
   }
 
-  &.gp {
-    color: #333;
-    background-color: #FFE401;
+  &.kmt {
+    color: #fff;
+    background-color: #0D2393;
   }
+
 }
 
 .photo {
