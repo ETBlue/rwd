@@ -506,6 +506,13 @@ li {
     margin-right: 2rem;
   }
 
+  #input-address {
+    display: inline-block;
+    span {
+      display: inline-block;
+    }
+  }
+
 }
 
 /* responsive layout */

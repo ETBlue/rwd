@@ -33,7 +33,7 @@
 
             <div id="unknown"><!-- to be toggled -->
                 <span aria-hidden="true" class="icon-notification"></span>
-                <p>未指定立委</p>
+                <p>手動查詢選區立委</p>
             </div>
 
             <div style="display:none;" id="national"><!-- to be toggled -->
@@ -45,9 +45,9 @@
                 <span aria-hidden="true" class="icon-loop"></span><span class="screen-reader-text">手動選擇立委</span>
             </a>
 
-            <a class="action manual locked" id="action-done"><!-- to be toggled -->
+            <!--<a class="action manual locked" id="action-done"> 
                 <span aria-hidden="true" class="icon-checkmark"></span><span class="screen-reader-text">確定</span>
-            </a>
+            </a>-->
 
         </header>
 
@@ -138,11 +138,11 @@
         <section id="manual-page"><!-- to be toggled -->
 
             <div id="setup-location">
-                <p>選區立委</p>
+                <p>查詢你的區域立委</p>
 
                 <div class="ready">
 
-                    <span class="result">尚未選擇</span><!-- to be substituted 
+                    <span class="result">　</span><!-- to be substituted 
                     1. address, e.g.: 100台北市中正區徐州路 
                     2. 定位中... <span aria-hidden="true" class="icon-spinner-2"></span>
                 -->
@@ -176,10 +176,13 @@
                             <option value="west">中正區</option><!-- to be substituted (value,content) -->
                         </select>
 
-                        <input id="input-address" type="text" name="input-address" size="20"></input>
+                        <div id="input-address">
+                            <input type="text" name="input-address" size="20"></input>
+                            <span>請輸入您戶籍的村里</span>
+                        </div>
 
                         <a href="#" class="action save">
-                            <span aria-hidden="true" class="icon-disk"></span>
+                            <span aria-hidden="true" class="icon-checkmark"></span>
                         </a>
 
                     </form>
@@ -188,11 +191,11 @@
             </div>
 
             <div id="setup-person">
-                <p>不分區立委</p>
+                <p>查詢各黨不分區立委</p>
 
                 <div class="ready">
 
-                    <span class="result">尚未選擇</span><!-- to be substituted (content) -->
+                    <span class="result">　</span><!-- to be substituted (content) -->
 
 <!-- simplify ui, ignored
                     <a href="#" class="action edit">
@@ -219,7 +222,7 @@
                         </select>
 
                         <a href="#" class="action save">
-                            <span aria-hidden="true" class="icon-disk"></span>
+                            <span aria-hidden="true" class="icon-checkmark"></span>
                         </a>
 
                     </form>
@@ -259,18 +262,19 @@
 </script>
 -->
 
-<!-- interaction -->
-<script src="js/vendor/zepto.min.js"></script>
+<!-- interaction 
+<script src="js/vendor/zepto.min.js"></script>-->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
 <script>
 var actionDoneActivate = function(){
-    $("#action-done").removeClass("locked").attr("href","#");
-    $("#action-done").on('click tap',function(){
         $("#manual-page").hide();
         $("#action-done").hide();
         $("#main-page").show();
         $("#action-manual").show();
-    })
 };
 
 $("#action-manual").on('click tap',function(){
@@ -278,6 +282,9 @@ $("#action-manual").on('click tap',function(){
     $("#action-manual").hide();
     $("#manual-page").show();
     $("#action-done").show();
+    $("#local").hide();
+    $("#unknown").show();
+    $("#national").hide();
 });
 
 $("#setup-location .update").on('click tap',function(){
