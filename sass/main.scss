@@ -190,6 +190,10 @@ textarea {
 #setup-location,
 #setup-person {
   padding: 1rem 0 2rem 0;
+}
+
+.ready,
+.editing {
   position: relative;
 }
 
@@ -208,34 +212,19 @@ a.action {
   }
 
   &.update,
-  &.upload,
-  &.edit,
-  &.save, {
+  &.save {
     padding: 0.5rem;
     position: absolute;
     right: 0;
   }
 
-  &.update,
-  &.upload,
-  &.edit {
-    top: 0.5rem;
-  }
-
-  &.save {
-    top: 5rem;
-  }
-
   &.update {
-    margin-right: 4rem;
+    top: -2rem;
+    margin-right: 0;
   }
 
-  &.upload {
-    margin-right: 2rem;
-  }
-
-  &.edit,
   &.save {
+    top: 0;
     margin-right: 0;
   }
 
@@ -500,10 +489,12 @@ li {
 //    @include background-image(linear-gradient(rgba(#fff,1), rgba(#ccc,1)));
   }
 
-  label {
-    display: inline-block;
+  #select-legislator,
+  #select-district,
+  #input-address {
     margin-right: 2rem;
   }
+
 }
 
 /* responsive layout */

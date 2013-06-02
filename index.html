@@ -26,86 +26,89 @@
 
         <header id="geolocation">
 
-            <div style="display:none;" id="local">
+            <div style="display:none;" id="local"><!-- to be toggled -->
                 <span aria-hidden="true" class="icon-target"></span>
-                <p>台北市第 3 選區</p>
+                <p>台北市第 3 選區</p><!-- to be substituted -->
             </div>
 
-            <div id="unknown">
+            <div id="unknown"><!-- to be toggled -->
                 <span aria-hidden="true" class="icon-notification"></span>
                 <p>未指定立委</p>
             </div>
 
-            <div style="display:none;" id="national">
+            <div style="display:none;" id="national"><!-- to be toggled -->
                 <span aria-hidden="true" class="icon-taiwan-map"></span>
-                <p>國民黨不分區</p>
+                <p>國民黨不分區</p><!-- to be substituted -->
             </div>
 
-            <a href="#" style="display:none;" class="action manual" id="action-manual">
+            <a href="#" style="display:none;" class="action manual" id="action-manual"><!-- to be toggled -->
                 <span aria-hidden="true" class="icon-loop"></span><span class="screen-reader-text">手動選擇立委</span>
             </a>
 
-            <a class="action manual locked" id="action-done">
+            <a class="action manual locked" id="action-done"><!-- to be toggled -->
                 <span aria-hidden="true" class="icon-checkmark"></span><span class="screen-reader-text">確定</span>
             </a>
 
         </header>
 
-        <section style="display:none;" id="main-page" itemscope itemtype="http://data-vocabulary.org/Person">
+        <section style="display:none;" id="main-page" itemscope itemtype="http://data-vocabulary.org/Person"><!-- to be toggled -->
 
-            <header id="legislator" class="kmt">
-                <div class="photo" style="background-image:url(img/羅淑蕾.jpg)">
-                    <img itemprop="photo" src="img/羅淑蕾.jpg" alt="羅淑蕾" />
+            <header id="legislator" class="kmt"><!-- to be substituted (class: tsu/pfp/dpp/kmt) -->
+                <div class="photo" style="background-image:url(img/羅淑蕾.jpg)"><!-- to be substituted (url) -->
+                    <img itemprop="photo" src="img/羅淑蕾.jpg" alt="羅淑蕾" /><!-- to be substituted (src, alt) -->
                 </div>
                 <div class="legislator">
-                    <h1 itemprop="name">羅淑蕾</h1>
-                    <aside class="party icons-party-kmt">國民黨</aside>
+                    <h1 itemprop="name">羅淑蕾</h1><!-- to be substituted (content) -->
+                    <aside class="party icons-party-kmt">國民黨</aside><!-- to be substituted (class: icons-party-tsu/icons-party-pfp/icons-party-dpp/icons-party-kmt, content) -->
                 </div>
-                <div class="standpoint nuke">
+                <div class="standpoint nuke"><!-- to be toggled -->
                     <p onclick="bomb();">擁核</p>
+                </div>
+                <div style="display:none;" class="standpoint no-nuke"><!-- to be toggled -->
+                    <p>反核</p>
                 </div>
             </header>
 
             <article id="quote">
 
                 <aside class="stamp unfavorable">
-                    <span class="types"></span><!-- for ttcat -->
-                    不怕民意型
+                    <span class="types"></span>
+                    不怕民意型<!-- to be substituted (content) -->
                 </aside>
 
-                <div class="responds"></div><!-- for ttcat -->
-                <p>對反核民意的回應？</p>
-                <p>「沒有必要回應。」</p>
-                <p>若很多民眾打進辦公室？</p>
-                <p>「不會拉！」</p>
+                <div class="responds"></div>
+                <p>對反核民意的回應？</p><!-- suggestion: keep this as the first paragraph for every response to make the content more understandable -->
+                <p>「沒有必要回應。」</p><!-- to be substituted -->
+                <p>若很多民眾打進辦公室？</p><!-- to be substituted -->
+                <p>「不會拉！」</p><!-- to be substituted -->
 
             </article>
 
             <footer id="contact">
-                <h2>國會研究室</h2>
+                <h2>國會研究室</h2><!-- to be substituted -->
                 <ul>
                     <li><span class="contact">電話</span>
                         <span class="data">
-                            <a class="data-text" itemprop="tel" href="tel:02-2358-6156">02-2358-6156
+                            <a class="data-text" itemprop="tel" href="tel:02-2358-6156">02-2358-6156<!-- to be substituted -->
                                 <span aria-hidden="true" class="icon-phone"></span>
                             </a>
                         </span>
                     </li>
                     <li><span class="contact">傳真</span>
                         <span class="data" itemprop="fax">
-                            <span class="data-text no-link">02-2358-6160</span>
+                            <span class="data-text no-link">02-2358-6160</span><!-- to be substituted -->
                         </span>
                     </li>
                     <li><span class="contact">地址</span>
                         <span class="data">
-                            <a class="data-text" itemprop="address" href="https://maps.google.com.tw/?q=10051臺北市中正區濟南路1段3-1號0406室">
-                                <span class="address">10051臺北市中正區濟南路1段3-1號0406室</span>
+                            <a class="data-text" itemprop="address" href="https://maps.google.com.tw/?q=10051臺北市中正區濟南路1段3-1號0406室"><!-- to be substituted (href) -->
+                                <span class="address">10051臺北市中正區濟南路1段3-1號0406室</span><!-- to be substituted -->
                                 <span aria-hidden="true" class="icon-map"></span>
                             </a>
                         </span>
                     </li>
                 </ul>
-                <h2>松山服務處</h2>
+                <h2>松山服務處</h2><!-- ignore: repeated area -->
                 <ul>
                     <li><span class="contact">電話</span>
                         <span class="data">
@@ -132,46 +135,48 @@
 
         </section>
 
-        <section id="manual-page">
+        <section id="manual-page"><!-- to be toggled -->
 
             <div id="setup-location">
                 <p>選區立委</p>
 
                 <div class="ready">
 
-                    <span class="result">尚未選擇</span>
-                    <span style="display:none;" class="result">100台北市中正區徐州路</span>
-                    <span style="display:none;" class="result">定位中... 
-                        <span aria-hidden="true" class="icon-spinner-2"></span>
-                    </span>
+                    <span class="result">尚未選擇</span><!-- to be substituted 
+                    1. address, e.g.: 100台北市中正區徐州路 
+                    2. 定位中... <span aria-hidden="true" class="icon-spinner-2"></span>
+                -->
 
+<!-- simplify ui, ignored
                     <a href="#" class="action edit">
                         <span aria-hidden="true" class="icon-pencil"></span>
                     </a>
                     <a class="action upload locked">
                         <span aria-hidden="true" class="icon-upload"></span>
                     </a>
-                    <a href="#" class="action update">
+-->
+                    <a href="#" class="action update"><!-- to be modified (class: locked) -->
                         <span aria-hidden="true" class="icon-spinner"></span>
                     </a>
 
                 </div>
 
-                <div style="display:none;" class="editing">
+                <div class="editing">
+
                     <form name="select-local">
 
                         <select name="select-city">
-                            <option value="Taipei">台北市</option>
-                            <option value="Taichung">台中市</option>
-                            <option value="Tainan">台南市</option>
-                            <option value="Kaoshung">高雄市</option>
+                            <option value="Taipei">台北市</option><!-- to be substituted (value,content) -->
+                            <option value="Taichung">台中市</option><!-- to be substituted (value,content) -->
+                            <option value="Tainan">台南市</option><!-- to be substituted (value,content) -->
+                            <option value="Kaoshung">高雄市</option><!-- to be substituted (value,content) -->
                         </select>
 
                         <select name="select-district">
-                            <option value="west">中正區</option>
+                            <option value="west">中正區</option><!-- to be substituted (value,content) -->
                         </select>
 
-                        <label><input type="text" name="input-address" size="20"></input></label>
+                        <input id="input-address" type="text" name="input-address" size="20"></input>
 
                         <a href="#" class="action save">
                             <span aria-hidden="true" class="icon-disk"></span>
@@ -187,18 +192,19 @@
 
                 <div class="ready">
 
-                    <span class="result">尚未選擇</span>
+                    <span class="result">尚未選擇</span><!-- to be substituted (content) -->
 
+<!-- simplify ui, ignored
                     <a href="#" class="action edit">
                         <span aria-hidden="true" class="icon-pencil"></span>
                     </a>
                     <a class="action upload locked">
                         <span aria-hidden="true" class="icon-upload"></span>
                     </a>
-
+-->
                 </div>
 
-                <div style="display:none;" class="editing">
+                <div class="editing">
                     <form name="select-national">
 
                         <select id="select-party">
@@ -209,7 +215,7 @@
                         </select>
 
                         <select id="select-legislator">
-                            <option value="green party">羅淑蕾</option>
+                            <option value="green party">羅淑蕾</option><!-- to be substituted (content) -->
                         </select>
 
                         <a href="#" class="action save">
@@ -238,8 +244,6 @@
 </html>
 
 <!-- h5bp default js link
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 -->
@@ -253,14 +257,67 @@
 </script>
 -->
 
-<!-- LiveReload -->
+<!-- interaction -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+<script>
+var actionDoneActivate = function(){
+    $("#action-done").removeClass("locked").attr("href","#");
+    $("#action-done").on('click tap',function(){
+        $("#manual-page").hide();
+        $("#action-done").hide();
+        $("#main-page").show();
+        $("#action-manual").show();
+    })
+};
+
+$("#action-manual").on('click tap',function(){
+    $("#main-page").hide();
+    $("#action-manual").hide();
+    $("#manual-page").show();
+    $("#action-done").show();
+});
+
+$("#setup-location .update").on('click tap',function(){
+    // to-do: if location update failed, show "#unknown" instead and hide others
+    $("#setup-location .result").text("（自動定位所抓取的地址） or 「無法自動定位，請手動指定地址」");
+    $("#local p").text("（自動定位所回傳的選區）");
+    $("#local").show();
+    $("#unknown").hide();
+    $("#national").hide();
+    actionDoneActivate();
+});
+
+$("#setup-location .save").on('click tap',function(){
+    $("#setup-location .result").text("（使用者手動設定的地址） ");
+    $("#local p").text("（手動定位所回傳的選區）");
+    $("#local").show();
+    $("#unknown").hide();
+    $("#national").hide();
+    actionDoneActivate();
+});
+
+$("#setup-person .save").on('click tap',function(){
+    $("#setup-person .result").text("（使用者手動選擇的立委） ");
+    $("#local").hide();
+    $("#unknown").hide();
+    $("#national p").text("（手動選擇的立委）");
+    $("#national").show();
+    actionDoneActivate();
+});
+
+</script>
+
+<!-- LiveReload 
 <script>document.write('<script src="http://'
     + (location.host || 'localhost').split(':')[0]
     + ':35729/livereload.js"></'
     + 'script>')
 </script>
+-->
 
-<!-- Font Bomb XDDD -->
+<!-- Font Bomb XDDD form auderyt++ -->
 <script>
 function bomb () {
     if (window.FONTBOMB_HIDE_CONFIRMATION) { return; } 
