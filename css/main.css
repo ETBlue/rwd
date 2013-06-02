@@ -615,10 +615,20 @@ li .address {
 #setup-person #input-address {
   margin-right: 2rem;
 }
+/* line 509, ../sass/main.scss */
+#setup-location #input-address,
+#setup-person #input-address {
+  display: inline-block;
+}
+/* line 511, ../sass/main.scss */
+#setup-location #input-address span,
+#setup-person #input-address span {
+  display: inline-block;
+}
 
 /* responsive layout */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  /* line 519, ../sass/main.scss */
+  /* line 526, ../sass/main.scss */
   #geolocation,
   #legislator,
   #quote,
@@ -629,33 +639,33 @@ li .address {
     padding-left: 10%;
   }
 
-  /* line 525, ../sass/main.scss */
+  /* line 532, ../sass/main.scss */
   #geolocation .manual {
     right: 10%;
     margin-right: -1rem;
   }
 
-  /* line 532, ../sass/main.scss */
+  /* line 539, ../sass/main.scss */
   .legislator .party {
     right: 10%;
   }
 
-  /* line 538, ../sass/main.scss */
+  /* line 545, ../sass/main.scss */
   #quote::before {
     left: 10%;
   }
-  /* line 541, ../sass/main.scss */
+  /* line 548, ../sass/main.scss */
   #quote .stamp {
     right: 10%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
-  /* line 548, ../sass/main.scss */
+  /* line 555, ../sass/main.scss */
   #page-wrapper {
     width: 80%;
   }
 
-  /* line 557, ../sass/main.scss */
+  /* line 564, ../sass/main.scss */
   #geolocation,
   #legislator,
   #quote,
@@ -666,33 +676,33 @@ li .address {
     padding-left: 10%;
   }
 
-  /* line 563, ../sass/main.scss */
+  /* line 570, ../sass/main.scss */
   #geolocation .manual {
     right: 10%;
     margin-right: -1rem;
   }
 
-  /* line 570, ../sass/main.scss */
+  /* line 577, ../sass/main.scss */
   .legislator .party {
     right: 12.5%;
   }
 
-  /* line 576, ../sass/main.scss */
+  /* line 583, ../sass/main.scss */
   #quote::before {
     left: 12.5%;
   }
-  /* line 579, ../sass/main.scss */
+  /* line 586, ../sass/main.scss */
   #quote .stamp {
     right: 12.5%;
   }
 }
 @media only screen and (min-width: 1201px) {
-  /* line 586, ../sass/main.scss */
+  /* line 593, ../sass/main.scss */
   #page-wrapper {
     width: 960px;
   }
 
-  /* line 595, ../sass/main.scss */
+  /* line 602, ../sass/main.scss */
   #geolocation,
   #legislator,
   #quote,
@@ -703,22 +713,22 @@ li .address {
     padding-left: 120px;
   }
 
-  /* line 601, ../sass/main.scss */
+  /* line 608, ../sass/main.scss */
   #geolocation .manual {
     right: 120px;
     margin-right: -1rem;
   }
 
-  /* line 608, ../sass/main.scss */
+  /* line 615, ../sass/main.scss */
   .legislator .party {
     right: 120px;
   }
 
-  /* line 614, ../sass/main.scss */
+  /* line 621, ../sass/main.scss */
   #quote::before {
     left: 120px;
   }
-  /* line 617, ../sass/main.scss */
+  /* line 624, ../sass/main.scss */
   #quote .stamp {
     right: 120px;
   }
@@ -732,7 +742,7 @@ li .address {
   font-style: normal;
 }
 
-/* line 636, ../sass/main.scss */
+/* line 643, ../sass/main.scss */
 .icon-loop, .icon-loop-2, .icon-spinner, .icon-map, .icon-location, .icon-phone, .icon-search, .icon-target, .icon-checkmark, .icon-pencil, .icon-taiwan-map, .icon-spinner-2, .icon-spinner-3, .icon-disk, .icon-spam, .icon-notification, .icon-upload {
   font-family: 'icomoon';
   speak: none;
@@ -745,22 +755,22 @@ li .address {
   font-size: 0.9rem;
 }
 
-/* line 648, ../sass/main.scss */
+/* line 655, ../sass/main.scss */
 .icon-loop:before {
   content: "\e000";
 }
 
-/* line 651, ../sass/main.scss */
+/* line 658, ../sass/main.scss */
 .icon-loop-2:before {
   content: "\e001";
 }
 
-/* line 654, ../sass/main.scss */
+/* line 661, ../sass/main.scss */
 .icon-spinner:before {
   content: "\e002";
 }
 
-/* line 657, ../sass/main.scss */
+/* line 664, ../sass/main.scss */
 .icon-map:before {
   content: "\e003";
   position: absolute;
@@ -768,23 +778,23 @@ li .address {
   top: 0.5rem;
 }
 
-/* line 663, ../sass/main.scss */
+/* line 670, ../sass/main.scss */
 .icon-location:before {
   content: "\e004";
 }
 
-/* line 666, ../sass/main.scss */
+/* line 673, ../sass/main.scss */
 .icon-phone:before {
   content: "\e005";
   margin-left: 0.5rem;
 }
 
-/* line 670, ../sass/main.scss */
+/* line 677, ../sass/main.scss */
 .icon-search:before {
   content: "\e006";
 }
 
-/* line 673, ../sass/main.scss */
+/* line 680, ../sass/main.scss */
 .icon-target:before {
   content: "\e007";
   color: #999;
@@ -792,17 +802,17 @@ li .address {
   width: 1rem;
 }
 
-/* line 679, ../sass/main.scss */
+/* line 686, ../sass/main.scss */
 .icon-checkmark:before {
   content: "\e008";
 }
 
-/* line 682, ../sass/main.scss */
+/* line 689, ../sass/main.scss */
 .icon-pencil:before {
   content: "\e009";
 }
 
-/* line 685, ../sass/main.scss */
+/* line 692, ../sass/main.scss */
 .icon-taiwan-map:before {
   content: "\e00a";
   color: #999;
@@ -810,22 +820,22 @@ li .address {
   width: 1rem;
 }
 
-/* line 691, ../sass/main.scss */
+/* line 698, ../sass/main.scss */
 .icon-spinner-2:before {
   content: "\e00b";
 }
 
-/* line 694, ../sass/main.scss */
+/* line 701, ../sass/main.scss */
 .icon-spinner-3:before {
   content: "\e00c";
 }
 
-/* line 697, ../sass/main.scss */
+/* line 704, ../sass/main.scss */
 .icon-disk:before {
   content: "\e00d";
 }
 
-/* line 700, ../sass/main.scss */
+/* line 707, ../sass/main.scss */
 .icon-spam:before {
   content: "\e00e";
   color: #999;
@@ -833,7 +843,7 @@ li .address {
   width: 1rem;
 }
 
-/* line 706, ../sass/main.scss */
+/* line 713, ../sass/main.scss */
 .icon-notification:before {
   content: "\e00f";
   color: #999;
@@ -841,7 +851,7 @@ li .address {
   width: 1rem;
 }
 
-/* line 713, ../sass/main.scss */
+/* line 720, ../sass/main.scss */
 .icon-upload:before {
   content: "\e010";
 }
